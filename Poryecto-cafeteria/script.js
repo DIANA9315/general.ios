@@ -3,6 +3,7 @@ const listaOrdenes = document.getElementById('listaOrdenes');
 
 const addOrdenBtn = document.getElementById('botonAgregarPedido');
 
+
 let ordenid = 1;
 
 addOrdenBtn.addEventListener('click', () => {
