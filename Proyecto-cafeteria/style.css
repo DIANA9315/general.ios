@@ -48,3 +48,329 @@ button:hover {
     color: green;
     font-weight: bold;
 }
+
+/* --- Nuevos Estilos para Menú Interactivo, Carrito y Gestión --- */
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Menú Interactivo */
+#menu-interactivo h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.menu-categorias {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+}
+
+.menu-categorias .categoria-btn {
+    background-color: #eee;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 0; /* Anula el margin-bottom general de los botones */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-categorias .categoria-btn.active {
+    background-color: #007bff; /* Un azul para la categoría activa */
+    color: white;
+    border-color: #007bff;
+}
+
+.platillos-grid { /* Renombrado de .postres-grid a .platillos-grid para ser más genérico */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Más compacto para menú */
+    gap: 20px;
+}
+
+.platillo-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para que el botón quede abajo */
+}
+
+.platillo-card img {
+    max-width: 100%;
+    height: 120px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.platillo-card h3 {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: #444;
+}
+
+.platillo-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Permite que la descripción ocupe el espacio */
+}
+
+.platillo-card .precio {
+    font-weight: bold;
+    color: #28a745; /* Color verde para el precio */
+    margin-bottom: 10px;
+}
+
+.platillo-card .add-to-cart-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 100%; /* Botón de ancho completo */
+    margin-top: 10px; /* Espacio superior */
+    transition: background-color 0.3s;
+}
+
+.platillo-card .add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Carrito de Compras */
+#carrito-compras h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+}
+
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+#lista-carrito li:last-child {
+    border-bottom: none;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info .item-nombre {
+    font-weight: bold;
+    color: #444;
+}
+
+.item-info .item-precio-unitario {
+    font-size: 0.85em;
+    color: #777;
+}
+
+.item-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-cantidad button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-bottom: 0; /* Anular margin-bottom general */
+    transition: background-color 0.3s;
+}
+.item-cantidad button:hover {
+    background-color: #0056b3;
+}
+
+.item-cantidad span {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.item-remover {
+    background-color: #dc3545; /* Rojo para eliminar */
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-bottom: 0; /* Anular margin-bottom general */
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+.item-remover:hover {
+    background-color: #c82333;
+}
+
+.carrito-vacio {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+}
+
+#realizarPedidoOnlineBtn {
+    background-color: #28a745; /* Verde para el botón de pedido */
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+#realizarPedidoOnlineBtn:hover {
+    background-color: #218838;
+}
+#realizarPedidoOnlineBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+/* Gestión de Pedidos Online */
+#gestion-pedidos-online h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.tabs-pedidos {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.tabs-pedidos .tab-btn {
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #ddd;
+    border-bottom: none; /* Se quita el borde de abajo para que la línea de abajo sea la del contenedor */
+    padding: 10px 20px;
+    border-radius: 8px 8px 0 0; /* Esquinas redondeadas solo arriba */
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: -2px; /* Superpone un poco el botón sobre la línea de abajo */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.tabs-pedidos .tab-btn.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pedidos-lista {
+    display: none; /* Oculta todas las listas por defecto */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.pedidos-lista.active {
+    display: grid; /* Muestra solo la lista activa como grid */
+}
+
+.pedido-card {
+    background-color: #fefefe;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pedido-card h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.pedido-card p {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.pedido-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    border-top: 1px dashed #eee;
+    padding-top: 10px;
+}
+
+.pedido-card ul li {
+    padding: 3px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.pedido-card .total-pedido {
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.pedido-card .entregar-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95em;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.pedido-card .entregar-btn:hover {
+    background-color: #0056b3;
+}
+
+.no-pedidos {
+    text-align: center;
+    color: #888;
+    grid-column: 1 / -1; /* Centra el mensaje si no hay pedidos */
+    padding: 20px;
+}
