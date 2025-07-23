@@ -8,12 +8,26 @@
 <body>
     <h1>Fetch parte II</h1>
 
-    <button id="btnAgregarPlatillo">Agregar platillo</button>
-    <button id="btnEliminarPlatillo">Eliminar platillo</button>
-
     <div>
-        <h2 id="platillo"></h2>
-        <img id="imagenPlatillo">
+        <h2>Agregar Nuevo Platillo</h2>
+        <label for="inputNombrePlatillo">Nombre:</label><br>
+        <input type="text" id="inputNombrePlatillo" placeholder="Ej. Pizza Pepperoni"><br><br>
+
+        <label for="inputPrecioPlatillo">Precio:</label><br>
+        <input type="number" id="inputPrecioPlatillo" placeholder="Ej. 120.50"><br><br>
+
+        <label for="inputImagenPlatillo">URL de la Imagen:</label><br>
+        <input type="text" id="inputImagenPlatillo" placeholder="Ej. https://ejemplo.com/imagen.jpg"><br><br>
+
+        <button id="btnAgregarPlatillo">Agregar platillo</button>
+    </div>
+
+    <hr> <button id="btnEliminarPlatillo">Eliminar platillo (ID 3)</button>
+
+    <hr> <div>
+        <h2>Platillo del día (décimo)</h2>
+        <h2 id="platillo">Cargando...</h2>
+        <img id="imagenPlatillo" alt="Imagen del platillo" style="max-width: 300px; height: auto;">
     </div>
 
     <script src="script.js"></script>
