@@ -1,0 +1,40 @@
+
+:root {
+    --primary-bg-light: #FFF8E1; /* Crema muy suave, casi beige claro */
+    --secondary-peach: #FFDAB9; /* Melocotón Suave */
+    --accent-rose: #FFB6C1; /* Rosa Pastel (un toque más vibrante) */
+    --accent-gold: #DAA520; /* Dorado sutil para acentos */
+    --text-dark-brown: #5C4033; /* Marrón oscuro cálido, como chocolate */
+    --text-light: #FFFFFF; /* Blanco */
+    --button-berry: #C71585; /* Rosa frambuesa/baya para botones */
+    --button-berry-hover: #A0116B; /* Rosa frambuesa más oscuro */
+    --card-bg-white: #FFFFFF; /* Fondo de tarjeta blanco puro */
+    --border-soft: #F5E0D5; /* Borde muy suave, con un toque melocotón */
+    --shadow-warm: rgba(180, 100, 120, 0.2); /* Sombra cálida con tono rosado */
+    --decorative-element: #FFC0CB; /* Pink para elementos decorativos */
+}
+
+/* --- Importar Fuentes de Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Quicksand:wght@300;400;500;700&display=swap');
+
+/* --- Estilos Generales del Cuerpo --- */
+body {
+    font-family: 'Quicksand', sans-serif; /* Fuente moderna y suave para texto general */
+    margin: 0;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--primary-bg-light) 0%, var(--secondary-peach) 100%); /* Degradado cálido y suave */
+    color: var(--text-dark-brown); /* Texto en marrón cálido */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive; /* Fuente caligráfica para el título principal */
+    font-size: 4em; /* Más grande para impacto */
+    color: var(--button-berry); /* Color de baya profundo */
+    text-shadow: 2px 2px 5px var(--shadow-warm); 
