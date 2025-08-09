@@ -6,6 +6,7 @@ import { TituloConLinea } from "./TituloConLinea";
         <h1>Texto</h1>
         <hr>
     </div>
+    
     <p>Este es el contenido del párrafo</p>
 </div>
 */
